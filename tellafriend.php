@@ -123,22 +123,22 @@ $url = tep_db_prepare_input($HTTP_POST_VARS['privatekey']);
 // "KEEP TO THE CODE" and you won't get errors.
 
 //Enter your own name here in between the quotes
-$ownersname = tep_db_prepare_input("Prasad Konde");
+$ownersname = tep_db_prepare_input("Six Steps");
 
 //Enter your own email here in between the quotes
-$ownersemail = tep_db_prepare_input("prasad@sixsteps.org.in");
+$ownersemail = tep_db_prepare_input("sales@sixsteps.org.in");
 
 //Enter an email subject line that you would like on the emails that come to you after each use of the form
 $ownerssubject = tep_db_prepare_input("Rtc is using");
 
 //Enter an email subject line that you want the sender to get when they fill the form out
-$usersemailsubject = tep_db_prepare_input("Thank you for spreading the word about script-smart.com");
+$usersemailsubject = tep_db_prepare_input("Thank you for using our broadcast service");
 
 //Enter an email message that you want the sender to get when they fill the form out
 //NOTE: \r\n in your text emails equals a hard return (or enter) so \r\n\r\n equals 2 of them :)
 
 $usersemailtext =	"Hi =usersname=,\r\n\r\n" .
-					"Thank you for using our service\r\n\r\n" .
+					"Thank you for using our video broadcast service\r\n\r\n" .
 					"Best wishes,\r\n" .
 					"=ownersname=";
 
@@ -226,7 +226,7 @@ if (isset($formusersemail)) {
 	$friendsmessage = str_replace("=usersname=", $formusersname, $friendsemailtext);
 	$friendsmessage = str_replace("=friendsname=", $formfriendsname, $friendsmessage);
 	$friendsmessage = str_replace("=ownersname=", $ownersname, $friendsmessage);
-	$friendsmessage = str_replace("=url=", $url, $friendsmessage);
+        $friendsmessage = str_replace("=url=", $url, $friendsmessage);
 
 	mail($formfriendsname . ' <' . $formfriendsemail . '>',$friendsemailsubject,$friendsmessage,$headers,$fifth);
 //-----------
