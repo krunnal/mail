@@ -123,7 +123,7 @@ $url = tep_db_prepare_input($HTTP_POST_VARS['privatekey']);
 // "KEEP TO THE CODE" and you won't get errors.
 
 //Enter your own name here in between the quotes
-$ownersname = tep_db_prepare_input("Six Steps");
+$ownersname = tep_db_prepare_input("CCTV Live");
 
 //Enter your own email here in between the quotes
 $ownersemail = tep_db_prepare_input("sales@sixsteps.org.in");
