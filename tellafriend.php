@@ -149,9 +149,11 @@ $friendsemailsubject = tep_db_prepare_input("Check This Private Broadcast");
 //NOTE: \r\n in your text emails equals a hard return (or enter) so \r\n\r\n equals 2 of them :)
 
 $friendsemailtext =	"Hi =friendsname=,\r\n\r\n" .
-					"Check out this link.\r\n\r\n" .
+					\b "Check out this link.\r\n\r\n" .
+					"Please click on below link to watch private broadcast \r\n\r\n" .
+					"Wait a moment for the room to appear  \r\n\r\n" .
 					"=url=,\r\n" .
-					"It's my private video broadcast \r\n" .
+					
 					"=usersname=";
 
 //Enter in the thankyou URL that the form will direct the sender to after the form is processed.
