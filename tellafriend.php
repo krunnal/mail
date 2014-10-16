@@ -55,6 +55,9 @@ function input_check_mailinj($value, $sendto)
    $headers  = "From: <" . $report_to . ">\n";
    $headers .= "MIME-Version: 1.0\n";
    $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+   $email_body = '<table width="100%" border="0"
+ cellspacing="0" cellpadding="0"
+style="font-family:Vivaldi;font-size:12px;text-align:left">'."\n";
 
 
    foreach($suspicious_str as $suspect)
